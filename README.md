@@ -24,15 +24,13 @@ My work focuses on architecture, reliable integrations, structured outputs, vali
 |---|---|---|
 | [AI Lawyer — Tax Review Second Opinion](./projects/ai-lawyer.md) | Multi-agent legal/tax research and document review with source verification and deterministic checks. | Research/review pipelines; **205 tests, 97% coverage reported in the project README**. Prototype; rules not professionally validated. |
 | [Delivery Grodno](./projects/delivery-grodno.md) | Vehicle-routing optimization with capacity, time windows, unloading, and shift constraints. | Hackathon prototype using FastAPI, OSRM, VROOM, React, and Leaflet; reproducible demo command included. |
-| [OSIRIS — OSINT / Geospatial Intelligence](./projects/osiris-osint.md) | Product direction for a multi-source geospatial intelligence workspace. | Concept / contribution details pending confirmation. Attribution is deliberately not overstated. |
+| [AIRI Security Agent](./projects/airi-sec-agent.md) | Autonomous cybersecurity agent for vulnerability analysis, patching, digital forensics, and CTF-style tasks. | Public implementation with tool execution, task-contract handling, verification, recovery, and runtime budgets. Includes a real Python code excerpt. |
 
 ---
 
 ## Other public work
 
 - [Agent Orchestration Framework](https://github.com/DimaDrukovskii/agent-orchestration-framework) — shared assistant core for voice and web channels, tenant knowledge bases, tool execution, human handoff, and analytics.
-- [AIRI Security Agent](https://github.com/DimaDrukovskii/airi-sec-agent) — security-oriented agent workflow for vulnerability analysis, patching, forensics, and CTF tasks with verification and recovery.
-- [OSIRIS repository](https://github.com/DimaDrukovskii/osiris) — linked separately from the concept page; authorship and individual contribution should be clarified before attributing the full codebase.
 - [Video Automation Pipeline](https://github.com/DimaDrukovskii/videos-) — automated vertical-video workflow with voice generation, subtitles, b-roll, and quality checks.
 
 ## Technical competencies
