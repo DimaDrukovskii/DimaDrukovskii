@@ -55,17 +55,18 @@ This excerpt is from the implemented `LiveTrader` risk path:
 ```ts
 private guardVeto(requireFreshness: boolean, dataAsOfMs?: number | null): string | null {
   try {
-    const decision = this.guard.evaluate({
+    const d = this.guard.evaluate({
       live: this.liveMode,
       nowMs: Date.now(),
-      realizedPnlTotalUsd: this.realizedPnlTotal(),
+      realizedPnlTotalUsd: this.positions.reduce(
+        (sum, p) => sum + (p.status === "closed" ? (p.pnl ?? 0) : 0),
+        0,
+      ),
       requireFreshness,
       dataAsOfMs,
       apiErrorStreak: this.apiErrorStreak,
     });
-    return decision.allow
-      ? null
-      : `HOLD | risk guard: ${decision.rejectReasons.join(", ")}`;
+    return d.allow ? null : `HOLD | risk guard: ${d.rejectReasons.join(", ")}`;
   } catch (error) {
     return `HOLD | risk guard: guard_error`;
   }
